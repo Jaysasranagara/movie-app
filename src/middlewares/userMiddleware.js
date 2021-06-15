@@ -26,7 +26,7 @@ userMiddleware.register = (async (req,res,next) => {
     
 })
 
-userMiddleware.Login = async (req, res, next) => {
+userMiddleware.validateLogin = async (req, res, next) => {
     const loginSchema = joi.object({
         username: joi.string().require(),
         password: joi.string().require(),
